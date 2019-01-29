@@ -1,5 +1,6 @@
 .carrotLogo {
     display: inline;
+    max-width: 150px;
 }
 .welcome {
     display: inline;
