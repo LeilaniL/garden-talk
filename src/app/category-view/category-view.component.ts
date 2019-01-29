@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../models/category-model';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { CategoryService } from '../category.service';
 
 @Component({
@@ -10,15 +10,13 @@ import { CategoryService } from '../category.service';
   providers: [CategoryService]
 })
 export class CategoryViewComponent implements OnInit {
-  categories: Category[];
+  categoryName: string;
 
-  constructor(private router: Router, private categoryService: CategoryService) { }
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService) { }
 
   ngOnInit() {
-    this.categories = this.categoryService.getCategories();
+    this.route.params.forEach((urlParameters) => {
+      this.categoryName = (urlParameters['name']);
+    })
   }
-  // goToDetailPage(clickedAlbum: Album) {
-  //   this.router.navigate(['albums', clickedAlbum.id]);
-  // };
-
 }

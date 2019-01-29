@@ -10,6 +10,7 @@ import { CategoryService } from './category.service';
   providers: [CategoryService]
 })
 export class AppComponent implements OnInit {
+
   title: string = 'GardenTalk';
   categories: Category[];
 
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.categories = this.categoryService.getCategories();
   }
+
   goToCategory(clickedCategory: Category) {
     this.router.navigate(['categories', clickedCategory.name])
   }
