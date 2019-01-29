@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   goToCategory(clickedCategory: Category) {
+    console.log("goToCategory called");
     this.router.navigate(['categories', clickedCategory.name])
   }
 }

@@ -10,4 +10,12 @@ export class CategoryService {
   getCategories() {
     return CATEGORIES;
   }
+
+  showCategory(name) {
+    for (let i = 0; i < 4; i++) {
+      if (CATEGORIES[i].name === name) {
+        return CATEGORIES[i];
+      }
+    }
+  }
 }

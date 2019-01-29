@@ -1,18 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoryViewComponent } from '../app/category-view/category-view.component';
-import { Category } from './models/category-model';
-import { AppComponent } from './app.component';
 
 
 const appRoutes: Routes = [
     {
         path: 'categories/:name',
         component: CategoryViewComponent
-    },
-    {
-        path: '',
-        component: AppComponent
     }
 ];
 
