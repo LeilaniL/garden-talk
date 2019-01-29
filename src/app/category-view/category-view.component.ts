@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../models/category-model';
+import { Post } from '../models/post-model';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { CategoryService } from '../category.service';
